@@ -28,7 +28,4 @@ node {
     stage('Test') {
         echo 'Building....'
     }
-    stage('Deploy') {
-        echo 'Deploying....'
-    }
 }
