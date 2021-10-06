@@ -11,7 +11,10 @@ ${password}  secret_sauce
 *** Test Cases ***
 LoginTestinvalid
     [TAGS]    ui
-    create webdriver    Chrome    executable_path=/usr/bin/chromedriver
+    ${options}=  Evaluate  sys.modules['selenium.webdriver'].ChromeOptions()  sys, selenium.webdriver
+    Call Method    ${options}    add_argument    headless
+    Call Method    ${options}    add_argument    disable-gpu
+    create webdriver    Chrome    headlessChrome    executable_path=/usr/bin/chromedriver    chrome_options=${options}
     go to    ${url}
     enterUserNameAndPassword
     click element  id:login-button
