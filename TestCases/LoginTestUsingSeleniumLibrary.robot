@@ -11,8 +11,8 @@ ${password}  secret_sauce
 *** Test Cases ***
 LoginTestinvalid
     [TAGS]    ui
-    create webdriver    chrome    executable_path="/usr/bin/chromedriver"
-    open browser    ${url}    ${browser}
+    create webdriver    Chrome    executable_path=/usr/bin/chromedriver
+    go to    ${url}
     enterUserNameAndPassword
     click element  id:login-button
     Element Text Should Be    class:title    PRODUCTS
