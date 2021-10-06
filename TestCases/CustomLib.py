@@ -2,8 +2,11 @@
 
 import random
 
-def get_random_name():
-    username= ["standard_user", "problem_user", "performance_glitch_user"]
-    return random.choice(username)
+
+class CustomLib(object):
+
+    def get_random_name(self):
+        username= ["standard_user", "problem_user", "performance_glitch_user"]
+        return random.choice(username)
 
 
