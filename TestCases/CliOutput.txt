@@ -1,0 +1,21 @@
+2021-10-19 17:25:52.925701 - "Memory utlization" = 24.6419
+2021-10-19 17:25:53.444850 - "Cpu utlization" = 0
+2021-10-19 17:25:53.712218 - "disk space" = 
+Filesystem      Size  Used Avail Use% Mounted on
+devtmpfs        482M     0  482M   0% /dev
+tmpfs           492M     0  492M   0% /dev/shm
+tmpfs           492M  432K  492M   1% /run
+tmpfs           492M     0  492M   0% /sys/fs/cgroup
+/dev/xvda1      8.0G  1.5G  6.6G  19% /
+tmpfs            99M     0   99M   0% /run/user/1000
+
+2021-10-19 17:46:38.990286 - "Memory utlization" = 25.5254
+2021-10-19 17:46:39.428310 - "Cpu utlization" = 0
+2021-10-19 17:46:39.681239 - "disk space" = 
+Filesystem      Size  Used Avail Use% Mounted on
+devtmpfs        482M     0  482M   0% /dev
+tmpfs           492M     0  492M   0% /dev/shm
+tmpfs           492M  436K  492M   1% /run
+tmpfs           492M     0  492M   0% /sys/fs/cgroup
+/dev/xvda1      8.0G  1.7G  6.3G  22% /
+tmpfs            99M     0   99M   0% /run/user/1000
