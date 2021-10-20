@@ -9,7 +9,7 @@ class Ec2UsageCalculator(object):
     def runSsh(self, cmd):
         userName = "ec2-user"
         try:
-            key = paramiko.RSAKey.from_private_key_file("home/ec2-user/private/JenkinsVM.pem")
+            key = paramiko.RSAKey.from_private_key_file("/home/ec2-user/private/JenkinsVM.pem")
             ssh = paramiko.SSHClient()
             ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
             paramiko.util.log_to_file("filename.log")
@@ -43,5 +43,8 @@ class Ec2UsageCalculator(object):
         with open('CliOutput.txt', mode="a") as outputFile:
             time= datetime.now()
             outputFile.write("\n"+ str(time) + " - " + outputFor+ " = " + str(data))
+
+    def print_word(self):
+        return "good"
 
 
