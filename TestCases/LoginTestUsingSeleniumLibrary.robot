@@ -1,7 +1,7 @@
 *** Settings ***
 Library           SeleniumLibrary
 Library           CustomLib.py
-Library           Ec2UsageCalculator.py    3.108.56.29
+Library           Ec2UsageCalculator.py    3.109.155.240
 
 *** variables ***
 ${url}  https://www.saucedemo.com/
@@ -33,6 +33,11 @@ getCpuUtlizationTest
     ${cpuUtl}    get cpu utlization    ${getCpuUtlizationCmd}
     should be true    (${cpuUtl}<80)
     write output to file with timestamp    ${cpuUtl}    "Cpu utlization"
+
+getprintTest
+    [tags]    opss
+    print word
+
 
 diskSpaceTest
     [tags]    cli
