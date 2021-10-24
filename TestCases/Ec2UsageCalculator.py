@@ -9,7 +9,7 @@ class Ec2UsageCalculator(object):
     def runSsh(self, cmd):
         userName = "ec2-user"
         try:
-            key = paramiko.RSAKey.from_private_key_file("/tmp/computVM.ppk")
+            key = paramiko.RSAKey.from_private_key_file("/tmp/JenkinsVM.pem")
             ssh = paramiko.SSHClient()
             ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
             paramiko.util.log_to_file("filename.log")
