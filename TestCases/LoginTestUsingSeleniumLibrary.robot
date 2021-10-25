@@ -25,7 +25,7 @@ getMemUtlizationTest
     [Tags]    cli
     ${memoryUtl}    get memory utlization    ${getmemoryUtlizationCmd}
     log    ${memoryUtl}
-    should be true    (${memoryUtl}<50)
+    should be true    (${memoryUtl}<80)
     write output to file with timestamp    ${memoryUtl}    "Memory utlization"
 
 getCpuUtlizationTest
