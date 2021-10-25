@@ -1,5 +1,6 @@
 *** Settings ***
 Library           SeleniumLibrary
+
 Library           CustomLib.py
 variables         ../config/variables.py
 Library           Ec2UsageCalculator.py    ${hostname}    
