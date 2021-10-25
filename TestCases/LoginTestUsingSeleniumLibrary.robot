@@ -8,12 +8,9 @@ Library           Ec2UsageCalculator.py    ${hostname}
 ${url}  https://www.saucedemo.com/
 ${browser}  chrome
 ${password}  secret_sauce
-${getmemoryUtlizationCmd}    free | grep Mem | awk '{print ($2-$7)/$2 * 100}'
-${getCpuUtlizationCmd}    top -b -n 1 -d1 | grep "%Cpu(s)"
-
 
 *** Test Cases ***
-loginTestinvalid
+loginTestValidCredentials
     [TAGS]    ui
     openHeadlessModeChrome
     go to    ${url}
@@ -35,11 +32,6 @@ getCpuUtlizationTest
     should be true    (${cpuUtl}<80)
     write output to file with timestamp    ${cpuUtl}    "Cpu utlization"
 
-getprintTest
-    [tags]    opss
-    print word
-
-
 diskSpaceTest
     [tags]    cli
     ${diskspace}    disk space calculator
@@ -50,6 +42,7 @@ enterUserNameAndPassword
     ${username}    get random name
     input text  id:user-name   ${username}
     input text  id:password    ${password}
+
 openHeadlessModeChrome
     ${options}=  Evaluate  sys.modules['selenium.webdriver'].ChromeOptions()  sys, selenium.webdriver
     Call Method    ${options}    add_argument    disable-dev-shm-usage

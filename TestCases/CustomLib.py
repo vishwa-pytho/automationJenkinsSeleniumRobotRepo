@@ -1,7 +1,5 @@
 import random
 
-
-
 class CustomLib(object):
     ROBOT_LIBRARY_SCOPE = 'TEST CASE'
 
