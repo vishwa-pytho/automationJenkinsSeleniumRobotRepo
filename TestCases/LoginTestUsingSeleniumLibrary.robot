@@ -1,7 +1,8 @@
 *** Settings ***
 Library           SeleniumLibrary
 Library           CustomLib.py
-Library           Ec2UsageCalculator.py    65.2.29.173
+variables         ../config/variables.py
+Library           Ec2UsageCalculator.py    ${hostname}    
 
 *** variables ***
 ${url}  https://www.saucedemo.com/
