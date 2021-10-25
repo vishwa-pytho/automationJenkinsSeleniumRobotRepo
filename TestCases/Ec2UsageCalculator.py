@@ -1,4 +1,5 @@
 import paramiko
+
 from datetime import datetime
 
 class Ec2UsageCalculator(object):
